@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors()); 
 
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/quizdb';
+const mongoURI = process.env.MONGODB_URI ;
 
 const path=require("path")
 
@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
   });
   
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
